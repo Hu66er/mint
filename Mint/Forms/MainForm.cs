@@ -501,6 +501,8 @@ namespace Mint
             else
             {
                 this.Show();
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
                 this.Activate();
                 this.Focus();
             }
