@@ -50,7 +50,10 @@ namespace Mint
                     AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
 
                     Options.LoadSettings();
-                    Application.Run(new MainForm());
+                    MainForm form = new MainForm();
+                    form.WindowState = FormWindowState.Minimized;
+                    form.ShowInTaskbar = false;
+                    Application.Run(form);
                 }
                 else
                 {
